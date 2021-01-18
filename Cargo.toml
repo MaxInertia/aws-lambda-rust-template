@@ -1,9 +1,22 @@
 [package]
 name = "my_lambda_function"
 version = "0.1.0"
-authors = ["Dorian Thiessen (dbt908) <dorian.thiessen@usask.ca>"]
+authors = ["Dorian Thiessen <dorian11thiessen@gmail.com>"]
 edition = "2018"
+autobins = false
+exclude = ["target/**/*"]
 
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
 [dependencies]
+lambda_runtime = "0.2.1"
+serde = "^1"
+serde_json = "^1"
+serde_derive = "^1"
+log = "^0.4"
+simple_logger = "^1"
+simple-error = "0.2.3"
+
+[[bin]]
+name = "bootstrap"
+path = "src/main.rs"
