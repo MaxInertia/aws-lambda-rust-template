@@ -21,7 +21,7 @@ fn my_handler(e: CustomEvent, _ctx: Context) -> Result<CustomOutput, HandlerErro
     if e.first_name == "" {
         bail!("Empty first name");
     }
-    Ok(CustomOutput{
+    Ok(CustomOutput {
         message: format!("Hello, {}!", e.first_name),
     })
 }
@@ -60,7 +60,7 @@ mod tests {
             log_group_name: "".to_string(),
             client_context: None,
             identity: None,
-            deadline: 0
+            deadline: 0,
         };
     }
 }
